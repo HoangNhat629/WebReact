@@ -1,0 +1,12 @@
+.navbar-nav a{
+    font-size: 19px;
+}
+.nav-items{
+display: grid;
+grid-template-columns: repeat(4, auto);
+grid-gap: 5px;
+list-style: none;
+text-align: center;
+justify-content: end;
+margin-right: 1rem
+}
