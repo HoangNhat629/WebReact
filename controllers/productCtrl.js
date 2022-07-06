@@ -89,7 +89,7 @@ const productCtrl = {
         category,
       });
 
-      await newProduct.save();
+      await newProduct.save(); 
       res.json({ msg: "Created a product" });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
@@ -128,11 +128,11 @@ const productCtrl = {
       const { id } = req.params;
       const { value } = req.body;
       const product = await Products.findById(id);
-      product.comment.push(value);
-      const updatePro = await Products.findOneAndUpdate(id, product, {
+      product.comments.push(value);
+    await Products.findOneAndUpdate(id, product, {
         new: true,
       });
-      res.json(updatePro);
+      res.json({msg:" Created Comment Successfully"});
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }

@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import { CartContext } from "../../Cart/Cart";
 import { Link } from "react-router-dom";
 import "./Cart.css";
+
 export default class Cart extends Component {
   static contextType = CartContext;
 
@@ -57,6 +58,7 @@ export default class Cart extends Component {
               </div>
             </div>
           ))}
+
           <div className="total">
             <Link to="/payment">Payment</Link>
             <h3>Total: ${total}</h3>

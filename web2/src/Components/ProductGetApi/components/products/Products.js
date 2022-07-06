@@ -7,8 +7,10 @@ import "./products.css";
 import axios from "axios";
 import Filter from "./Filters";
 import LoadMore from "./LoadMore";
-import img from "../../../../assets/images/background.webp";
+import Footer from "../../../Home/Footer/Footer";
 
+import img from "../../../../assets/images/banner.webp";
+import HeaderNode from "../HeaderNode/HeaderNode";
 export default function Products() {
   const state = useContext(Cart2);
 
@@ -73,28 +75,39 @@ export default function Products() {
     );
   return (
     <>
+      {!isAdmin && (
+        <>
+          <HeaderNode />
+        </>
+      )}
       <Header />
+
       {!isAdmin && (
         <div className="hero">
           <div className="card bg-dark text-white border-0">
             <img src={img} className="card-img" alt="Background" />
-            <div className="card-img-overlay d-flex flex-column justify-content-center">
-              <div className="container">
-                {" "}
-                <h5 className="card-title display-3 fw-border mb-0">
-                  NEW SEASON ARRIVALS
-                </h5>
-                <p className="card-text lead fs-2">CHECK OUT ALL TRENDS</p>
-              </div>
-            </div>
           </div>
         </div>
+      )}
+      <hr />
+      {!isAdmin && (
+        <>
+          <div className="col-12 mb-5">
+            <h1 className="display-6 fw-bolder text-center">
+              {" "}
+              FEATURED PRODUCTS{" "}
+            </h1>
+            <hr />
+          </div>
+        
+        </>
       )}
       <hr />
       <div className="col-12 mb-5">
         <h1 className="display-6 fw-bolder text-center"> PRODUCTS </h1>
         <hr />
       </div>
+
       <Filter />
       {isAdmin && (
         <div className="delete-all">
@@ -119,6 +132,7 @@ export default function Products() {
       </div>
       <LoadMore />
       {products.length === 0 && <Loading />}
+      <Footer />
     </>
   );
 }

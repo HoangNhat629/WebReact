@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton"; //npm install react-loading-skeleton
 import "react-loading-skeleton/dist/skeleton.css";
 import { NavLink } from "react-router-dom";
+import Footer from "../../Home/Footer/Footer";
 export default function Product() {
   const [data] = useState([
     {
@@ -439,7 +440,8 @@ export default function Product() {
             {loading ? <Loading /> : <ShowProducts />}
           </div>
         </div>
-      </div>
+      </div>{" "}
+      <Footer />
     </div>
   );
 }

@@ -4,6 +4,7 @@ import Skeleton from "react-loading-skeleton";
 import { useParams } from "react-router";
 import Navbar from "../Navbar/Navbar";
 import { CartContext } from "../../Cart/Cart";
+import Footer from "../../Home/Footer/Footer";
 export default function Product() {
   const { id } = useParams();
   const [data] = useState([
@@ -387,6 +388,10 @@ export default function Product() {
           </div>
         </div>
       </div>
+      <br/>
+      <br/>
+      <br/>
+      <Footer/>
     </>
   );
 }

@@ -2,12 +2,13 @@ import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Cart2 } from "../../GlobalState";
 import Header from "../headers/Header";
-
+import Footer from "../../../Home/Footer/Footer";
 export default function OrderDetails() {
   const state = useContext(Cart2);
   const [history] = state.userAPI.history;
   const [orderDetails, setOrderDetails] = useState([]);
   const params = useParams();
+  const [isAdmin] = state.userAPI.isAdmin;
   useEffect(() => {
     if (params.id) {
       history.forEach((item) => {
@@ -66,6 +67,13 @@ export default function OrderDetails() {
           </tbody>
         </table>
       </div>
+      <br/>
+      <br/>
+      {!isAdmin && (
+        <>
+          <Footer />
+        </>
+      )}
     </>
   );
 }

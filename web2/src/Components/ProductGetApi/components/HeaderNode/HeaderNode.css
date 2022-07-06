@@ -1,0 +1,19 @@
+.header_node {
+  background-color: #c144ac;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  display: flex;
+}
+.header_node > h1 {
+  color: rgb(231, 13, 13);
+  font-size: 20px;
+  margin-top: -100px;
+}
+.header_node > p {
+  margin-top: 8px;
+  color: aliceblue;
+  margin-left: 650px;
+  font-size: 20px;
+  font-family: sans-serif;
+}

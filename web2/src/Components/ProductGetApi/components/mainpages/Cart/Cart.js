@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import Header from "../../headers/Header";
 import { Cart2 } from "../../../GlobalState";
-
+import Footer from "../../../../Home/Footer/Footer";
 import axios from "axios";
 import "./cart.css";
 import PaypalButton from "./PaypalButton";

@@ -23,9 +23,9 @@ export default function Comment({ product }) {
 
   const CommentPro = async (value, id) => {
     try {
-      const data = await axios.post(
+      const {data}= await axios.post(
         `api/products/${id}/commentProduct`,
-        value,
+        {value},
         {
           headers: { Authorization: token },
         }

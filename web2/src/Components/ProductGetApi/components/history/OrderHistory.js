@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import Header from "../headers/Header";
 import "./history.css";
 import axios from "axios";
+import Footer from "../../../Home/Footer/Footer";
 export default function OrderHistory() {
   const state = useContext(Cart2);
-
   const [history, setHistory] = state.userAPI.history;
   const [isAdmin] = state.userAPI.isAdmin;
   const [token] = state.token;
@@ -58,6 +58,13 @@ export default function OrderHistory() {
           </tbody>
         </table>
       </div>
+      <br/>
+      <br/>
+      {!isAdmin && (
+        <>
+          <Footer />
+        </>
+      )}
     </>
   );
 }

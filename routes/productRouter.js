@@ -6,7 +6,7 @@ router
   .post(productCtrl.createProduct);
 
 router
-  .route("/products/:id")
+  .route("/products/:id") 
   .delete(productCtrl.deleteProduct)
   .put(productCtrl.updateProduct);
 router.route("/products/:id/commentProduct").post(productCtrl.Comment);
