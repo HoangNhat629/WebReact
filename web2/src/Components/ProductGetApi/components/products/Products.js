@@ -8,9 +8,9 @@ import axios from "axios";
 import Filter from "./Filters";
 import LoadMore from "./LoadMore";
 import Footer from "../../../Home/Footer/Footer";
-
 import img from "../../../../assets/images/banner.webp";
 import HeaderNode from "../HeaderNode/HeaderNode";
+import Slider from "./Slider/Slider";
 export default function Products() {
   const state = useContext(Cart2);
 
@@ -99,7 +99,7 @@ export default function Products() {
             </h1>
             <hr />
           </div>
-        
+          <Slider />
         </>
       )}
       <hr />
